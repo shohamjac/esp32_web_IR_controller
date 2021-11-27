@@ -1,0 +1,259 @@
+<!DOCTYPE html><html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+<table class="fixed" border="0">
+    <tr><td colspan="2">
+        <h2>What will your pleasure be?</h2>
+        <div id="demo"> sir
+        </div>
+    </td></tr>
+    <tr><td>
+            <button id="upload" type="button" style="height:50px;width:100%; background-color: #FF5555" onclick="power()">power!</button>
+        </td>
+        <td>
+            <button id="upload" type="button" style="height:50px;width:100%" onclick="ok()">ok</button>
+    </td></tr>
+    <tr><td>
+        <button id="upload" type="button" style="height:50px;width:100%" onclick="v_up()">volume up</button>
+        </td>
+        <td>
+        <button id="upload" type="button" style="height:50px;width:100%" onclick="v_down()">volume down</button>
+        </td>
+    </tr>
+    <tr><td>
+            <button id="upload" type="button" style="height:100px;width:100%" onclick="input()">input</button>
+        </td>
+        <td>
+            <button id="upload" type="button" style="height:50px;width:100%" onclick="up()">up</button>
+            <button id="upload" type="button" style="height:50px;width:100%" onclick="down()">down</button>
+        </td>
+    </tr>
+    <tr><td>
+        <button id="upload" type="button" style="height:50px;width:100%" onclick="sing()">Sing!</button>
+    </td></tr>
+    <tr><td>
+        <button id="upload" type="button" style="height:50px;width:100%" onclick="sing2()">Sing2!</button>
+    </td></tr>
+</table>
+<script>
+function power() {
+
+    /* Max size of an individual file. Make sure this
+     * value is same as that set in file_server.c */
+    var BUTTON_NAME = "/power";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4) {
+            if (xhttp.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            } else if (xhttp.status == 0) {
+                alert("Server closed the connection abruptly!");
+                location.reload()
+            } else {
+                alert(xhttp.status + " Error!\n" + xhttp.responseText);
+                location.reload()
+            }
+        }
+    };
+    xhttp.open("POST", BUTTON_NAME , true);
+    xhttp.send();
+}
+
+function v_up() {
+
+    /* Max size of an individual file. Make sure this
+     * value is same as that set in file_server.c */
+    var BUTTON_NAME = "/v_up";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4) {
+            if (xhttp.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            } else if (xhttp.status == 0) {
+                alert("Server closed the connection abruptly!");
+                location.reload()
+            } else {
+                alert(xhttp.status + " Error!\n" + xhttp.responseText);
+                location.reload()
+            }
+        }
+    };
+    xhttp.open("POST", BUTTON_NAME , true);
+    xhttp.send();
+}
+
+function v_down() {
+
+    /* Max size of an individual file. Make sure this
+     * value is same as that set in file_server.c */
+    var BUTTON_NAME = "/v_down";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4) {
+            if (xhttp.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            } else if (xhttp.status == 0) {
+                alert("Server closed the connection abruptly!");
+                location.reload()
+            } else {
+                alert(xhttp.status + " Error!\n" + xhttp.responseText);
+                location.reload()
+            }
+        }
+    };
+    xhttp.open("POST", BUTTON_NAME , true);
+    xhttp.send();
+}
+
+function input() {
+
+    /* Max size of an individual file. Make sure this
+     * value is same as that set in file_server.c */
+    var BUTTON_NAME = "/input";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4) {
+            if (xhttp.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            } else if (xhttp.status == 0) {
+                alert("Server closed the connection abruptly!");
+                location.reload()
+            } else {
+                alert(xhttp.status + " Error!\n" + xhttp.responseText);
+                location.reload()
+            }
+        }
+    };
+    xhttp.open("POST", BUTTON_NAME , true);
+    xhttp.send();
+}
+
+function up() {
+
+    /* Max size of an individual file. Make sure this
+     * value is same as that set in file_server.c */
+    var BUTTON_NAME = "/up";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4) {
+            if (xhttp.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            } else if (xhttp.status == 0) {
+                alert("Server closed the connection abruptly!");
+                location.reload()
+            } else {
+                alert(xhttp.status + " Error!\n" + xhttp.responseText);
+                location.reload()
+            }
+        }
+    };
+    xhttp.open("POST", BUTTON_NAME , true);
+    xhttp.send();
+}
+
+function down() {
+
+    /* Max size of an individual file. Make sure this
+     * value is same as that set in file_server.c */
+    var BUTTON_NAME = "/down";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4) {
+            if (xhttp.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            } else if (xhttp.status == 0) {
+                alert("Server closed the connection abruptly!");
+                location.reload()
+            } else {
+                alert(xhttp.status + " Error!\n" + xhttp.responseText);
+                location.reload()
+            }
+        }
+    };
+    xhttp.open("POST", BUTTON_NAME , true);
+    xhttp.send();
+}
+
+function ok() {
+
+    /* Max size of an individual file. Make sure this
+     * value is same as that set in file_server.c */
+    var BUTTON_NAME = "/ok";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4) {
+            if (xhttp.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            } else if (xhttp.status == 0) {
+                alert("Server closed the connection abruptly!");
+                location.reload()
+            } else {
+                alert(xhttp.status + " Error!\n" + xhttp.responseText);
+                location.reload()
+            }
+        }
+    };
+    xhttp.open("POST", BUTTON_NAME , true);
+    xhttp.send();
+}
+
+
+function sing() {
+
+    /* Max size of an individual file. Make sure this
+     * value is same as that set in file_server.c */
+    var BUTTON_NAME = "/sing";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4) {
+            if (xhttp.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            } else if (xhttp.status == 0) {
+                alert("Server closed the connection abruptly!");
+                location.reload()
+            } else {
+                alert(xhttp.status + " Error!\n" + xhttp.responseText);
+                location.reload()
+            }
+        }
+    };
+    xhttp.open("POST", BUTTON_NAME , true);
+    xhttp.send();
+}
+
+function sing2() {
+
+    /* Max size of an individual file. Make sure this
+     * value is same as that set in file_server.c */
+    var BUTTON_NAME = "/sing2";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4) {
+            if (xhttp.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            } else if (xhttp.status == 0) {
+                alert("Server closed the connection abruptly!");
+                location.reload()
+            } else {
+                alert(xhttp.status + " Error!\n" + xhttp.responseText);
+                location.reload()
+            }
+        }
+    };
+    xhttp.open("POST", BUTTON_NAME , true);
+    xhttp.send();
+}
+</script>
+</body></html>
