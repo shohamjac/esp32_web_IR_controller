@@ -1,1 +1,1 @@
-It is builded on the esp32 http server example.
+It is based on the esp32 http server example.
